@@ -9,7 +9,13 @@ redirect_from:
 
 {% include base_path %}
 
-I am an undergraduate student at the Korea Advanced Institute of Science & Technology (KAIST), working with Prof. [Hyunwoo J. Kim](https://scholar.google.com/citations?user=LfBoJt8AAAAJ&hl=en) in the [MLV Lab](https://mlv.kaist.ac.kr/). My research interests include AI agents, video understanding, and multimodal AI.
+## News
+
+- **Feb. 2026** Completed undergraduate studies in the School of Computing at KAIST.
+
+I received my undergraduate education at the Korea Advanced Institute of Science & Technology (KAIST), where I was advised by Prof. [Hyunwoo J. Kim](https://scholar.google.com/citations?user=LfBoJt8AAAAJ&hl=en) in the [MLV Lab](https://mlv.kaist.ac.kr/).
+
+My research interests lie in building AI agents that can automate complex, multi-step tasks, and in advancing multimodal AI systems that better understand, reason over, and interact with visual information, particularly videos.
 
 ## Education
 
@@ -17,7 +23,15 @@ I am an undergraduate student at the Korea Advanced Institute of Science & Techn
 
 ## Work Experiences
 
+- **Smoretalk** - AI Engineer, Dec. 2024 - Aug. 2025
+
+- **Naviworks, DX Technology Team** - Internship, AI Engineer, Feb. 2024 - Aug. 2024
+
 - **MLV Lab, KAIST** - Undergraduate Student, advised by Prof. [Hyunwoo J. Kim](https://scholar.google.com/citations?user=LfBoJt8AAAAJ&hl=en)
+
+## Patents
+
+{% include patents.html %}
 
 ## Publications
 

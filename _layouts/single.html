@@ -47,7 +47,17 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
-        {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
+        {% if page.resource_buttons %}
+          <p>
+            {% if page.projecturl %}<a href="{{ page.projecturl }}" class="btn btn--small">Project Page</a>{% endif %}
+            {% if page.codeurl %}<a href="{{ page.codeurl }}" class="btn btn--small">Code</a>{% endif %}
+            {% if page.paperurl %}<a href="{{ page.paperurl }}" class="btn btn--small">Paper</a>{% endif %}
+          </p>
+        {% endif %}
+
+        {% if page.resource_buttons and page.citation %}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
+        {% elsif page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% elsif page.citation and page.paperurl and page.slidesurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a></p>
