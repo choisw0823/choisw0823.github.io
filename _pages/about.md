@@ -9,13 +9,13 @@ redirect_from:
 
 {% include base_path %}
 
-## News
-
-- **Feb. 2026** Completed undergraduate studies in the School of Computing at KAIST.
-
 I received my undergraduate education at the Korea Advanced Institute of Science & Technology (KAIST), where I was advised by Prof. [Hyunwoo J. Kim](https://scholar.google.com/citations?user=LfBoJt8AAAAJ&hl=en) in the [MLV Lab](https://mlv.kaist.ac.kr/).
 
 My research interests lie in building AI agents that can automate complex, multi-step tasks, and in advancing multimodal AI systems that better understand, reason over, and interact with visual information, particularly videos.
+
+## News
+
+- **Feb. 2026** Completed undergraduate studies in the School of Computing at KAIST.
 
 ## Education
 
