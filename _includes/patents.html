@@ -6,7 +6,6 @@
 {% if patent.title_ko %}
 <p class="patent-entry__subtitle">{{ patent.title_ko }}</p>
 {% endif %}
-<p class="patent-entry__authors">{{ patent.inventors }}</p>
 <p class="patent-entry__meta">{{ patent.applicant }}, Korean Patent Application No. {{ patent.application_number }} (filed {{ patent.application_date }}), Publication No. {{ patent.publication_number }} (published {{ patent.publication_date }}). Status: {{ patent.status }}.</p>
 {% if patent.url %}
 <p class="patent-entry__links"><a href="{{ patent.url }}" class="btn btn--small">Patent</a></p>

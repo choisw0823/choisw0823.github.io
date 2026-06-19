@@ -27,7 +27,7 @@ My research interests lie in building AI agents that can automate complex, multi
 
 - **Naviworks, DX Technology Team** - Internship, AI Engineer, Feb. 2024 - Aug. 2024
 
-- **MLV Lab, KAIST** - Undergraduate Student, advised by Prof. [Hyunwoo J. Kim](https://scholar.google.com/citations?user=LfBoJt8AAAAJ&hl=en)
+- **MLV Lab, KAIST** - Intern, Jun. 2025 - Present, advised by Prof. [Hyunwoo J. Kim](https://scholar.google.com/citations?user=LfBoJt8AAAAJ&hl=en)
 
 ## Patents
 

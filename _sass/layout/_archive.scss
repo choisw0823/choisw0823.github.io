@@ -176,6 +176,15 @@
   border-bottom: 1px solid var(--global-border-color);
 }
 
+.publication-entry {
+  margin: 0.85em 0;
+  padding: 1em 1.1em;
+  border: 1px solid var(--global-border-color);
+  border-left: 4px solid var(--global-base-color);
+  border-radius: $border-radius;
+  background-color: var(--global-bg-color);
+}
+
 .publication-entry__title,
 .patent-entry__title {
   margin: 0 0 0.35em;
