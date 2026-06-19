@@ -19,7 +19,7 @@ My research interests lie in building AI agents that can automate complex, multi
 
 ## Education
 
-- **Korea Advanced Institute of Science & Technology (KAIST)**, School of Computing - Undergraduate Student, Mar. 2021 - Feb. 2026
+- **Korea Advanced Institute of Science & Technology (KAIST)**, School of Computing - B.S., Mar. 2021 - Feb. 2026
 
 ## Work Experiences
 
