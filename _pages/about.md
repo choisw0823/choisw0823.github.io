@@ -35,26 +35,4 @@ My research interests lie in building AI agents that can automate complex, multi
 
 ## Publications
 
-{% if site.publications.size > 0 %}
-  {% if site.publication_category %}
-    {% for category in site.publication_category %}
-      {% assign title_shown = false %}
-      {% for post in site.publications reversed %}
-        {% if post.category != category[0] %}
-          {% continue %}
-        {% endif %}
-        {% unless title_shown %}
-          <h3>{{ category[1].title }}</h3>
-          {% assign title_shown = true %}
-        {% endunless %}
-        {% include archive-single.html %}
-      {% endfor %}
-    {% endfor %}
-  {% else %}
-    {% for post in site.publications reversed %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endif %}
-{% else %}
-No publications listed yet.
-{% endif %}
+{% include publications-list.html %}

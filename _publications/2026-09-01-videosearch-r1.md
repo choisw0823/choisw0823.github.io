@@ -7,9 +7,9 @@ excerpt: 'Seohyun Lee<sup>*</sup>, <strong>Seoung Choi<sup>*</sup></strong>, Doh
 date: 2026-09-01
 venue: 'European Conference on Computer Vision (ECCV)'
 resource_buttons: true
-projecturl: '#'
-codeurl: '#'
-paperurl: '#'
+projecturl:
+codeurl:
+paperurl:
 citation: 'Seohyun Lee*, Seoung Choi*, Dohwan Ko*, Jongha Kim, and Hyunwoo J. Kim. (2026). &quot;VideoSearch-R1: Iterative Video Retrieval and Reasoning via Soft Query Refinement.&quot; <i>ECCV</i>.'
 ---
 

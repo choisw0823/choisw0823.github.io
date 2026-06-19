@@ -1,0 +1,34 @@
+{% assign publication = include.publication %}
+{% assign year = publication.date | default: "1900-01-01" | date: "%Y" %}
+{% assign has_resource_link = false %}
+{% if publication.projecturl and publication.projecturl != "#" %}
+{% assign has_resource_link = true %}
+{% endif %}
+{% if publication.codeurl and publication.codeurl != "#" %}
+{% assign has_resource_link = true %}
+{% endif %}
+{% if publication.paperurl and publication.paperurl != "#" %}
+{% assign has_resource_link = true %}
+{% endif %}
+<article class="publication-entry">
+<h4 class="publication-entry__title">
+{% if publication.link %}
+<a href="{{ publication.link }}">{{ publication.title }}</a>
+{% else %}
+<a href="{{ publication.url | relative_url }}">{{ publication.title }}</a>
+{% endif %}
+</h4>
+{% if publication.venue %}
+<p class="publication-entry__venue">{{ publication.venue }}, {{ year }}</p>
+{% endif %}
+{% if publication.excerpt %}
+<div class="publication-entry__authors">{{ publication.excerpt | markdownify }}</div>
+{% endif %}
+{% if publication.resource_buttons and has_resource_link %}
+<p class="publication-entry__links">
+{% if publication.projecturl and publication.projecturl != "#" %}<a href="{{ publication.projecturl }}" class="btn btn--small">Project Page</a>{% endif %}
+{% if publication.codeurl and publication.codeurl != "#" %}<a href="{{ publication.codeurl }}" class="btn btn--small">Code</a>{% endif %}
+{% if publication.paperurl and publication.paperurl != "#" %}<a href="{{ publication.paperurl }}" class="btn btn--small">Paper</a>{% endif %}
+</p>
+{% endif %}
+</article>

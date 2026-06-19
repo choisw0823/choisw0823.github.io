@@ -1,0 +1,25 @@
+{% if site.publications.size > 0 %}
+<div class="publication-list">
+{% if site.publication_category %}
+{% for category in site.publication_category %}
+{% assign title_shown = false %}
+{% for publication in site.publications reversed %}
+{% if publication.category != category[0] %}
+{% continue %}
+{% endif %}
+{% unless title_shown %}
+<h3 class="publication-list__heading">{{ category[1].title }}</h3>
+{% assign title_shown = true %}
+{% endunless %}
+{% include publication-entry.html publication=publication %}
+{% endfor %}
+{% endfor %}
+{% else %}
+{% for publication in site.publications reversed %}
+{% include publication-entry.html publication=publication %}
+{% endfor %}
+{% endif %}
+</div>
+{% else %}
+<p>No publications listed yet.</p>
+{% endif %}

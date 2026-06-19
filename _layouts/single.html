@@ -47,11 +47,22 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
-        {% if page.resource_buttons %}
+        {% assign has_resource_link = false %}
+        {% if page.projecturl and page.projecturl != "#" %}
+          {% assign has_resource_link = true %}
+        {% endif %}
+        {% if page.codeurl and page.codeurl != "#" %}
+          {% assign has_resource_link = true %}
+        {% endif %}
+        {% if page.paperurl and page.paperurl != "#" %}
+          {% assign has_resource_link = true %}
+        {% endif %}
+
+        {% if page.resource_buttons and has_resource_link %}
           <p>
-            {% if page.projecturl %}<a href="{{ page.projecturl }}" class="btn btn--small">Project Page</a>{% endif %}
-            {% if page.codeurl %}<a href="{{ page.codeurl }}" class="btn btn--small">Code</a>{% endif %}
-            {% if page.paperurl %}<a href="{{ page.paperurl }}" class="btn btn--small">Paper</a>{% endif %}
+            {% if page.projecturl and page.projecturl != "#" %}<a href="{{ page.projecturl }}" class="btn btn--small">Project Page</a>{% endif %}
+            {% if page.codeurl and page.codeurl != "#" %}<a href="{{ page.codeurl }}" class="btn btn--small">Code</a>{% endif %}
+            {% if page.paperurl and page.paperurl != "#" %}<a href="{{ page.paperurl }}" class="btn btn--small">Paper</a>{% endif %}
           </p>
         {% endif %}
 

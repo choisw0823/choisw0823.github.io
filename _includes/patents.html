@@ -1,17 +1,17 @@
 {% if site.data.patents %}
-  {% for patent in site.data.patents %}
-    <div class="list__item">
-      <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline">{{ patent.title }}</h2>
-        {% if patent.title_ko %}
-          <p><strong>{{ patent.title_ko }}</strong></p>
-        {% endif %}
-        <p>{{ patent.inventors }}</p>
-        <p>{{ patent.applicant }}, Korean Patent Application No. {{ patent.application_number }} (Filed {{ patent.application_date }}); Publication No. {{ patent.publication_number }} (Published {{ patent.publication_date }}). Status: {{ patent.status }}.</p>
-        {% if patent.url %}
-          <p><a href="{{ patent.url }}" class="btn btn--small">Patent</a></p>
-        {% endif %}
-      </article>
-    </div>
-  {% endfor %}
+<div class="patent-list">
+{% for patent in site.data.patents %}
+<article class="patent-entry">
+<h4 class="patent-entry__title">{{ patent.title }}</h4>
+{% if patent.title_ko %}
+<p class="patent-entry__subtitle">{{ patent.title_ko }}</p>
+{% endif %}
+<p class="patent-entry__authors">{{ patent.inventors }}</p>
+<p class="patent-entry__meta">{{ patent.applicant }}, Korean Patent Application No. {{ patent.application_number }} (filed {{ patent.application_date }}), Publication No. {{ patent.publication_number }} (published {{ patent.publication_date }}). Status: {{ patent.status }}.</p>
+{% if patent.url %}
+<p class="patent-entry__links"><a href="{{ patent.url }}" class="btn btn--small">Patent</a></p>
+{% endif %}
+</article>
+{% endfor %}
+</div>
 {% endif %}
