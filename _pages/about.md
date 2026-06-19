@@ -29,10 +29,6 @@ My research interests lie in building AI agents that can automate complex, multi
 
 - **MLV Lab, KAIST** - Intern, Jun. 2025 - Present, advised by Prof. [Hyunwoo J. Kim](https://scholar.google.com/citations?user=LfBoJt8AAAAJ&hl=en)
 
-## Patents
-
-{% include patents.html %}
-
 ## Publications
 
 {% include publications-list.html %}
