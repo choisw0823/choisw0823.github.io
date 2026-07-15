@@ -27,6 +27,18 @@ My research interests lie in building <strong class="research-accent">AI agents<
 
 <div class="experience-list">
   <article class="experience-item">
+    <a class="experience-item__logo" href="https://mlv.kaist.ac.kr/" aria-label="Visit MLV Lab">
+      <img src="{{ base_path }}/images/logos/mlv-lab.png" alt="MLV Lab logo" width="60">
+    </a>
+    <div class="experience-item__body">
+      <div class="experience-item__heading">
+        <strong>MLV Lab, KAIST</strong>
+        <span>Jun. 2025 - Present</span>
+      </div>
+      <p>Undergraduate Intern, advised by Prof. <a href="https://scholar.google.com/citations?user=LfBoJt8AAAAJ&hl=en">Hyunwoo J. Kim</a></p>
+    </div>
+  </article>
+  <article class="experience-item">
     <a class="experience-item__logo" href="https://welcome.flamel.app/en/company" aria-label="Visit Flamel by Smoretalk">
       <img src="{{ base_path }}/images/logos/smoretalk-flamel.png" alt="Flamel by Smoretalk logo" width="60">
     </a>
@@ -48,18 +60,6 @@ My research interests lie in building <strong class="research-accent">AI agents<
         <span>Feb. 2024 - Aug. 2024</span>
       </div>
       <p>AI Engineer Intern</p>
-    </div>
-  </article>
-  <article class="experience-item">
-    <a class="experience-item__logo" href="https://mlv.kaist.ac.kr/" aria-label="Visit MLV Lab">
-      <img src="{{ base_path }}/images/logos/mlv-lab.png" alt="MLV Lab logo" width="60">
-    </a>
-    <div class="experience-item__body">
-      <div class="experience-item__heading">
-        <strong>MLV Lab, KAIST</strong>
-        <span>Jun. 2025 - Present</span>
-      </div>
-      <p>Research Intern, advised by Prof. <a href="https://scholar.google.com/citations?user=LfBoJt8AAAAJ&hl=en">Hyunwoo J. Kim</a></p>
     </div>
   </article>
 </div>
