@@ -68,10 +68,10 @@ My research interests lie in building <strong class="research-accent">AI agents<
     </a>
     <div class="experience-item__body">
       <div class="experience-item__heading">
-        <strong>GDSC KAIST</strong>
+        <strong>Google Developer Student Clubs (GDSC) KAIST</strong>
         <span>Mar. 2023 - Feb. 2024</span>
       </div>
-      <p>Core Member &middot; Participated in technical projects and peer-learning activities within the KAIST developer community.</p>
+      <p>Core Member</p>
     </div>
   </article>
 </div>
