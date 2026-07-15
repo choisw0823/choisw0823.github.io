@@ -15,7 +15,13 @@ My research interests lie in building <strong class="research-accent">AI agents<
 
 ## News
 
-- <span class="news-date">Feb. 2026</span> Completed undergraduate studies in the School of Computing at KAIST.
+<div class="news-list">
+  <ul>
+    <li><span class="news-date">Feb. 2026</span><span><strong>MoE-GRPO</strong> was accepted to CVPR 2026.</span></li>
+    <li><span class="news-date">Feb. 2026</span><span>Completed my B.S. in the School of Computing at KAIST.</span></li>
+    <li><span class="news-date">Jun. 2026</span><span><strong>VideoSearch-R1</strong> was accepted to ECCV 2026.</span></li>
+  </ul>
+</div>
 
 ## Education
 
