@@ -23,7 +23,7 @@ My research interests lie in building <strong class="research-accent">AI agents<
 
 - **Korea Advanced Institute of Science & Technology (KAIST)**, School of Computing - B.S., Mar. 2021 - Feb. 2026
 
-## Work Experiences
+## Experiences
 
 <div class="experience-list">
   <article class="experience-item">
@@ -60,6 +60,18 @@ My research interests lie in building <strong class="research-accent">AI agents<
         <span>Feb. 2024 - Aug. 2024</span>
       </div>
       <p>AI Engineer Intern</p>
+    </div>
+  </article>
+  <article class="experience-item">
+    <a class="experience-item__logo" href="https://g.dev/choisw0823" aria-label="View Seoung Choi's Google Developer profile">
+      <img src="{{ base_path }}/images/logos/gdsc.png" alt="Google Developer Student Clubs logo" width="60">
+    </a>
+    <div class="experience-item__body">
+      <div class="experience-item__heading">
+        <strong>GDSC KAIST</strong>
+        <span>Mar. 2023 - Feb. 2024</span>
+      </div>
+      <p>Core Member &middot; Participated in technical projects and peer-learning activities within the KAIST developer community.</p>
     </div>
   </article>
 </div>
