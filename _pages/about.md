@@ -17,9 +17,9 @@ My research interests lie in building <strong class="research-accent">AI agents<
 
 <div class="news-list">
   <ul>
-    <li><span class="news-date">Feb. 2026</span><span><strong>MoE-GRPO</strong> was accepted to CVPR 2026.</span></li>
-    <li><span class="news-date">Feb. 2026</span><span>Completed my B.S. in the School of Computing at KAIST.</span></li>
-    <li><span class="news-date">Jun. 2026</span><span><strong>VideoSearch-R1</strong> was accepted to ECCV 2026.</span></li>
+    <li><span class="news-date">Jul. 2026</span><span>Our paper <strong>VideoSearch-R1: Iterative Video Retrieval and Reasoning via Soft Query Refinement</strong> has been accepted to ECCV 2026!</span></li>
+    <li><span class="news-date">Feb. 2026</span><span>Our paper <strong>MoE-GRPO: Optimizing Mixture-of-Experts via Reinforcement Learning in Vision-Language Models</strong> has been accepted to CVPR 2026!</span></li>
+    <li><span class="news-date">Feb. 2026</span><span>I received my B.S. in the School of Computing at KAIST.</span></li>
   </ul>
 </div>
 
