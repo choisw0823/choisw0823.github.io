@@ -35,7 +35,7 @@ redirect_from:
     </div>
     <div class="cv-resume__item">
       <p><strong>Korea Advanced Institute of Science & Technology (KAIST)</strong>, School of Computing <span>Mar. 2021 - Feb. 2026</span></p>
-      <p>B.S.</p>
+      <p>B.S. &middot; GPA: 3.8 / 4.3</p>
     </div>
   </section>
 
