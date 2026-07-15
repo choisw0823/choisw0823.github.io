@@ -307,8 +307,8 @@ a {
 
 .experience-item {
   display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
-  gap: 1rem;
+  grid-template-columns: 68px minmax(0, 1fr);
+  gap: 0.8rem;
   align-items: center;
   padding: 1rem 0;
   border-bottom: 1px solid var(--global-border-color);
@@ -316,23 +316,25 @@ a {
 
 .experience-item__logo {
   display: flex;
-  width: 96px;
-  height: 44px;
+  width: 68px;
+  height: 34px;
   align-items: center;
   justify-content: center;
-  padding: 0.3rem;
+  padding: 0.25rem;
   overflow: hidden;
   border: 1px solid var(--global-border-color);
   border-radius: 5px;
   background: #fff;
+}
 
-  img {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    object-fit: contain;
-    border-radius: 0;
-  }
+.page__content .experience-item__logo img {
+  width: auto;
+  height: auto;
+  max-width: 60px;
+  max-height: 24px;
+  margin: 0;
+  object-fit: contain;
+  border-radius: 0;
 }
 
 .experience-item__body {
@@ -528,13 +530,18 @@ a {
   }
 
   .experience-item {
-    grid-template-columns: 78px minmax(0, 1fr);
-    gap: 0.75rem;
+    grid-template-columns: 62px minmax(0, 1fr);
+    gap: 0.7rem;
   }
 
   .experience-item__logo {
-    width: 78px;
-    height: 40px;
+    width: 62px;
+    height: 32px;
+  }
+
+  .page__content .experience-item__logo img {
+    max-width: 54px;
+    max-height: 22px;
   }
 
   .experience-item__heading {
