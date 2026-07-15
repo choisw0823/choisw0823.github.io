@@ -35,9 +35,9 @@
 {% endif %}
 {% if publication.resource_buttons and has_resource_link %}
 <p class="publication-entry__links">
-{% if publication.projecturl and publication.projecturl != "#" %}<a href="{{ publication.projecturl }}" class="btn btn--small"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>Project</a>{% endif %}
-{% if publication.codeurl and publication.codeurl != "#" %}<a href="{{ publication.codeurl }}" class="btn btn--small"><i class="fab fa-github" aria-hidden="true"></i>Code</a>{% endif %}
-{% if publication.paperurl and publication.paperurl != "#" %}<a href="{{ publication.paperurl }}" class="btn btn--small"><i class="fas fa-file-lines" aria-hidden="true"></i>Paper</a>{% endif %}
+{% if publication.projecturl and publication.projecturl != "#" %}<a href="{{ publication.projecturl }}" class="btn btn--small btn--project"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>Project</a>{% endif %}
+{% if publication.codeurl and publication.codeurl != "#" %}<a href="{{ publication.codeurl }}" class="btn btn--small btn--code"><i class="fab fa-github" aria-hidden="true"></i>Code</a>{% endif %}
+{% if publication.paperurl and publication.paperurl != "#" %}<a href="{{ publication.paperurl }}" class="btn btn--small btn--paper"><i class="fas fa-file-lines" aria-hidden="true"></i>Paper</a>{% endif %}
 </p>
 {% endif %}
 </div>

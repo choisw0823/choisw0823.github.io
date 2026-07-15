@@ -60,9 +60,9 @@ layout: default
 
         {% if page.resource_buttons and has_resource_link %}
           <p>
-            {% if page.projecturl and page.projecturl != "#" %}<a href="{{ page.projecturl }}" class="btn btn--small"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>Project</a>{% endif %}
-            {% if page.codeurl and page.codeurl != "#" %}<a href="{{ page.codeurl }}" class="btn btn--small"><i class="fab fa-github" aria-hidden="true"></i>Code</a>{% endif %}
-            {% if page.paperurl and page.paperurl != "#" %}<a href="{{ page.paperurl }}" class="btn btn--small"><i class="fas fa-file-lines" aria-hidden="true"></i>Paper</a>{% endif %}
+            {% if page.projecturl and page.projecturl != "#" %}<a href="{{ page.projecturl }}" class="btn btn--small btn--project"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>Project</a>{% endif %}
+            {% if page.codeurl and page.codeurl != "#" %}<a href="{{ page.codeurl }}" class="btn btn--small btn--code"><i class="fab fa-github" aria-hidden="true"></i>Code</a>{% endif %}
+            {% if page.paperurl and page.paperurl != "#" %}<a href="{{ page.paperurl }}" class="btn btn--small btn--paper"><i class="fas fa-file-lines" aria-hidden="true"></i>Paper</a>{% endif %}
           </p>
         {% endif %}
 
