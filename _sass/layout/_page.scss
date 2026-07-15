@@ -399,3 +399,90 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+
+/*
+   CV resume
+   ========================================================================== */
+
+.cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-bottom: 1.25em;
+
+  .btn {
+    margin-bottom: 0;
+    text-decoration: none;
+  }
+}
+
+.cv-resume {
+  max-width: 880px;
+
+  section {
+    margin-top: 1.4em;
+  }
+
+  h3 {
+    margin: 0 0 0.65em;
+    padding-bottom: 0.3em;
+    font-size: $type-size-5;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--global-border-color);
+  }
+
+  p {
+    margin: 0.15em 0;
+    line-height: 1.5;
+  }
+}
+
+.cv-resume__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.85em;
+  margin-bottom: 1.6em;
+
+  @include breakpoint($medium) {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.45fr);
+    align-items: start;
+  }
+
+  h2 {
+    margin: 0 0 0.2em;
+    font-size: $type-size-2;
+    line-height: 1.1;
+  }
+}
+
+.cv-resume__contact {
+  @include breakpoint($medium) {
+    text-align: right;
+  }
+}
+
+.cv-resume__item {
+  margin-bottom: 0.75em;
+
+  p:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35em 0.75em;
+    justify-content: space-between;
+  }
+
+  span {
+    color: var(--global-text-color-light);
+    white-space: nowrap;
+  }
+}
+
+.cv-resume__ordered {
+  padding-left: 1.25em;
+
+  li {
+    margin-bottom: 0.55em;
+    line-height: 1.5;
+  }
+}

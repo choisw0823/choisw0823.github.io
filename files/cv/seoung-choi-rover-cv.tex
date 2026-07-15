@@ -1,0 +1,93 @@
+% Adapted from Rover Resume - Base Template
+% Link: https://github.com/subidit/rover-resume
+% License: CC BY 4.0
+
+\documentclass[10pt]{article}
+\usepackage[margin=0.65in, a4paper]{geometry}
+\usepackage[bookmarks=false]{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  pdfauthor={Seoung Choi},
+  pdftitle={Seoung Choi CV}
+}
+\setcounter{secnumdepth}{0}
+\pagestyle{empty}
+\pdfgentounicode=1
+
+\newcommand{\cvsection}[1]{%
+  \vspace{0.55em}
+  \noindent{\large\bfseries\MakeUppercase{#1}}\par
+  \vspace{0.15em}
+  \hrule
+  \vspace{0.35em}
+}
+
+\newcommand{\cventry}[4]{%
+  \noindent\textbf{#1}\hfill #2\par
+  \noindent\textit{#3}\hfill #4\par
+}
+
+\begin{document}
+
+\begin{center}
+\begin{minipage}{0.52\textwidth}
+{\Huge\bfseries Seoung Choi}\\
+\medskip
+M.S. Student, School of Computing, KAIST
+\end{minipage}
+\hfill
+\begin{minipage}{0.42\textwidth}
+\raggedleft
+Email: \href{mailto:choisw0823@kaist.ac.kr}{choisw0823@kaist.ac.kr}\\
+Website: \href{https://choisw0823.github.io}{choisw0823.github.io}\\
+GitHub: \href{https://github.com/choisw0823}{github.com/choisw0823}
+\end{minipage}
+\end{center}
+
+\cvsection{Education}
+\noindent\textbf{Korea Advanced Institute of Science \& Technology (KAIST), School of Computing}\par
+\noindent\textit{M.S. Student}\hfill Sep. 2026 -- Present\par
+\vspace{0.2em}
+\noindent\textbf{Korea Advanced Institute of Science \& Technology (KAIST), School of Computing}\par
+\noindent\textit{B.S.}\hfill Mar. 2021 -- Feb. 2026\par
+
+\cvsection{Research Interests}
+\begin{itemize}
+  \item AI agents for automating complex multi-step tasks, video understanding, and multimodal AI systems that better understand, reason over, and interact with visual information.
+\end{itemize}
+
+\cvsection{Experience}
+\cventry{MLV Lab, KAIST}{Daejeon, Korea}{Intern}{Jun. 2025 -- Present}
+\begin{itemize}
+  \item Conduct research in multimodal AI and vision-language models, advised by Prof. Hyunwoo J. Kim.
+\end{itemize}
+
+\cventry{Smoretalk}{Korea}{AI Engineer}{Dec. 2024 -- Aug. 2025}
+\begin{itemize}
+  \item Participated in AI service development using image generation and editing technologies.
+\end{itemize}
+
+\cventry{Naviworks, DX Technology Team}{Korea}{Internship, AI Engineer}{Feb. 2024 -- Aug. 2024}
+\begin{itemize}
+  \item Participated in the metaieyes digital twin platform project, developing product features for converting 2D data into 3D data.
+\end{itemize}
+
+\cvsection{Publications}
+\begin{enumerate}
+  \item Seohyun Lee*, \textbf{\underline{Seoung Choi}}*, Dohwan Ko*, Jongha Kim, and Hyunwoo J. Kim. ``VideoSearch-R1: Iterative Video Retrieval and Reasoning via Soft Query Refinement.'' ECCV, 2026. (*Equal contribution)
+  \item Dohwan Ko, Jinyoung Park, \textbf{\underline{Seoung Choi}}, Sanghyeok Lee, Seohyun Lee, and Hyunwoo J. Kim. ``MoE-GRPO: Optimizing Mixture-of-Experts via Reinforcement Learning in Vision-Language Models.'' CVPR, 2026.
+\end{enumerate}
+
+\cvsection{Patent}
+\begin{itemize}
+  \item Apparatus and method for generating standard objects based on satellite imagery. Korean Patent Application No. 10-2024-0117862, filed Aug. 30, 2024; Publication No. 10-2026-0031996, published Mar. 9, 2026.
+\end{itemize}
+
+\cvsection{Skills}
+\begin{description}
+  \item[Research] AI agents, video understanding, multimodal AI, vision-language models, retrieval and reasoning.
+  \item[Engineering] Python, PyTorch, Git, model training and evaluation, AI service prototyping.
+\end{description}
+
+\end{document}
