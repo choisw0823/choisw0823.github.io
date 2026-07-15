@@ -6,6 +6,8 @@ permalink: /publication/2026-09-01-videosearch-r1
 excerpt: 'Seohyun Lee<sup>*</sup>, <strong><u>Seoung Choi</u><sup>*</sup></strong>, Dohwan Ko<sup>*</sup>, Jongha Kim, and Hyunwoo J. Kim<br><sup>*</sup>Equal contribution'
 date: 2026-09-01
 venue: 'European Conference on Computer Vision (ECCV)'
+image: '/images/publications/videosearch-r1-teaser.png'
+image_alt: 'VideoSearch-R1 iterative video retrieval and soft query refinement overview'
 resource_buttons: true
 projecturl: 'https://mlvlab.github.io/VideoSearch-R1/'
 codeurl: 'https://github.com/mlvlab/VideoSearch-R1'

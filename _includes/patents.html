@@ -8,7 +8,7 @@
 {% endif %}
 <p class="patent-entry__meta">{{ patent.applicant }}, Korean Patent Application No. {{ patent.application_number }} (filed {{ patent.application_date }}), Publication No. {{ patent.publication_number }} (published {{ patent.publication_date }}). Status: {{ patent.status }}.</p>
 {% if patent.url %}
-<p class="patent-entry__links"><a href="{{ patent.url }}" class="btn btn--small">Patent</a></p>
+<p class="patent-entry__links"><a href="{{ patent.url }}" class="btn btn--small"><i class="fas fa-file-lines" aria-hidden="true"></i>Patent</a></p>
 {% endif %}
 </article>
 {% endfor %}

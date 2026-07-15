@@ -10,7 +10,16 @@
 {% if publication.paperurl and publication.paperurl != "#" %}
 {% assign has_resource_link = true %}
 {% endif %}
-<article class="publication-entry">
+<article class="publication-entry{% unless publication.image %} publication-entry--no-image{% endunless %}">
+{% if publication.image %}
+{% assign image_link = publication.projecturl | default: publication.paperurl | default: publication.url %}
+<figure class="publication-entry__figure">
+<a href="{{ image_link }}" aria-label="View {{ publication.title }}">
+<img src="{{ publication.image | relative_url }}" alt="{{ publication.image_alt | default: publication.title }}" loading="lazy">
+</a>
+</figure>
+{% endif %}
+<div class="publication-entry__body">
 <h4 class="publication-entry__title">
 {% if publication.link %}
 <a href="{{ publication.link }}">{{ publication.title }}</a>
@@ -26,9 +35,10 @@
 {% endif %}
 {% if publication.resource_buttons and has_resource_link %}
 <p class="publication-entry__links">
-{% if publication.projecturl and publication.projecturl != "#" %}<a href="{{ publication.projecturl }}" class="btn btn--small">Project Page</a>{% endif %}
-{% if publication.codeurl and publication.codeurl != "#" %}<a href="{{ publication.codeurl }}" class="btn btn--small">Code</a>{% endif %}
-{% if publication.paperurl and publication.paperurl != "#" %}<a href="{{ publication.paperurl }}" class="btn btn--small">Paper</a>{% endif %}
+{% if publication.projecturl and publication.projecturl != "#" %}<a href="{{ publication.projecturl }}" class="btn btn--small"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>Project</a>{% endif %}
+{% if publication.codeurl and publication.codeurl != "#" %}<a href="{{ publication.codeurl }}" class="btn btn--small"><i class="fab fa-github" aria-hidden="true"></i>Code</a>{% endif %}
+{% if publication.paperurl and publication.paperurl != "#" %}<a href="{{ publication.paperurl }}" class="btn btn--small"><i class="fas fa-file-lines" aria-hidden="true"></i>Paper</a>{% endif %}
 </p>
 {% endif %}
+</div>
 </article>
