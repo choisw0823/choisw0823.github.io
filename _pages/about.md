@@ -17,8 +17,9 @@ Recently, I have been particularly interested in the following research directio
 
 - <strong class="research-accent">Agent systems for video understanding and reasoning</strong>, particularly for long-form and egocentric videos, as well as methods for efficient video inference on edge devices.
 - <strong class="research-accent">Prompt and agent optimization methods</strong>, with an emphasis on improving their computational and data efficiency.
+- <strong class="research-accent">Post-training methods for Vision-Language Models (VLMs)</strong> to improve multimodal understanding and reasoning.
 
-I am open to research collaborations and internship opportunities. Please feel free to reach out via <a class="profile-link" href="mailto:choisw0823@kaist.ac.kr">email</a>.
+I am <strong><u>open to research collaborations and internship opportunities</u></strong>. Please feel free to reach out via <a class="profile-link" href="mailto:choisw0823@kaist.ac.kr">email</a>.
 
 ## News
 
