@@ -13,13 +13,20 @@ I am an M.S. student in the School of Computing at the Korea Advanced Institute 
 
 My research interests lie in building <strong class="research-accent">AI agents</strong> that can automate complex, multi-step tasks, and in advancing <strong class="research-accent">multimodal AI systems</strong> that better understand, reason over, and interact with visual information, particularly videos.
 
+Recently, I have been particularly interested in the following research directions:
+
+- I am interested in developing <strong class="research-accent">agent systems for video understanding and reasoning</strong>, particularly for long-form and egocentric videos, as well as methods for efficient video inference on edge devices.
+- I am also interested in <strong class="research-accent">prompt and agent optimization</strong> methods, with an emphasis on improving their computational and data efficiency.
+
+I am open to research collaborations and internship opportunities. Please feel free to reach out via <a class="profile-link" href="mailto:choisw0823@kaist.ac.kr">email</a>.
+
 ## News
 
 <div class="news-list">
   <ul>
     <li><span class="news-date">Jul. 2026</span><span>Our paper <strong>VideoSearch-R1: Iterative Video Retrieval and Reasoning via Soft Query Refinement</strong> has been accepted to ECCV 2026!</span></li>
-    <li><span class="news-date">Feb. 2026</span><span>Our paper <strong>MoE-GRPO: Optimizing Mixture-of-Experts via Reinforcement Learning in Vision-Language Models</strong> has been accepted to CVPR 2026!</span></li>
     <li><span class="news-date">Feb. 2026</span><span>I received my B.S. in the School of Computing at KAIST.</span></li>
+    <li><span class="news-date">Feb. 2026</span><span>Our paper <strong>MoE-GRPO: Optimizing Mixture-of-Experts via Reinforcement Learning in Vision-Language Models</strong> has been accepted to CVPR 2026!</span></li>
   </ul>
 </div>
 
