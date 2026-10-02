@@ -145,6 +145,8 @@ sitemap: false
     font-size: 12px;
     border: 1px solid var(--line);
     background: #fffdf6;
+    min-width: 0;
+    overflow: hidden;
   }
   .day.out { border-color: transparent; background: transparent; color: transparent; }
   .day.pre { color: #c5bda8; background: transparent; }
@@ -256,8 +258,6 @@ sitemap: false
     app.style.display = "block";
     render(true);
   }
-  if (store(KEY_AUTH) === PW_HASH) unlock();
-
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
     var v = document.getElementById("pw").value;
@@ -352,6 +352,8 @@ sitemap: false
     store(KEY_X, ymd(midnight(new Date())));
     render(true);
   });
+
+  if (store(KEY_AUTH) === PW_HASH) unlock();
 })();
 </script>
 </body>
