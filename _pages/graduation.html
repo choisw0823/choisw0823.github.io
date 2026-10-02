@@ -1,0 +1,358 @@
+---
+layout: null
+permalink: /graduation/
+sitemap: false
+---
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>졸업 달력</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gaegu:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #2f3a26;
+    --paper: #f4efe1;
+    --ink: #1f1f1f;
+    --muted: #7a7466;
+    --line: #d8cfb8;
+    --red: #c8241c;
+    --accent: #e7c64a;
+    --today: #fff3b0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    background-image: radial-gradient(rgba(0,0,0,.18) 1px, transparent 1px);
+    background-size: 6px 6px;
+    color: var(--ink);
+    font-family: "Noto Sans KR", system-ui, sans-serif;
+  }
+
+  /* ---------- gate ---------- */
+  #gate {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 16px;
+  }
+  .gate-card {
+    background: var(--paper);
+    width: 100%; max-width: 360px;
+    padding: 32px 24px;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    text-align: center;
+  }
+  .gate-card h1 {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400; font-size: 28px; margin: 0 0 6px;
+  }
+  .gate-card p { color: var(--muted); margin: 0 0 20px; font-size: 14px; }
+  .gate-card input {
+    width: 100%; padding: 12px; font-size: 16px;
+    border: 2px solid var(--ink); border-radius: 4px; background: #fff;
+    text-align: center; letter-spacing: 2px;
+  }
+  .gate-card button {
+    margin-top: 10px; width: 100%; padding: 12px;
+    font-size: 16px; font-weight: 700;
+    background: var(--ink); color: var(--paper);
+    border: 0; border-radius: 4px; cursor: pointer;
+  }
+  .gate-err { color: var(--red); font-size: 13px; min-height: 18px; margin-top: 8px; }
+  .shake { animation: shake .35s; }
+  @keyframes shake {
+    20%, 60% { transform: translateX(-8px); }
+    40%, 80% { transform: translateX(8px); }
+  }
+
+  /* ---------- main ---------- */
+  #app { display: none; max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+  .hero {
+    background: var(--paper);
+    border-radius: 6px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    text-align: center;
+    position: relative;
+  }
+  .hero .label { font-size: 13px; letter-spacing: 3px; color: var(--muted); }
+  .hero .dday {
+    font-family: "Black Han Sans", sans-serif;
+    font-size: clamp(56px, 14vw, 110px);
+    line-height: 1; margin: 6px 0;
+    color: var(--red);
+  }
+  .hero .sub { font-size: 15px; color: var(--ink); }
+  .stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+    margin: 20px 0 16px;
+  }
+  .stat { border: 2px solid var(--ink); border-radius: 4px; padding: 10px 4px; }
+  .stat b { display: block; font-size: 22px; }
+  .stat span { font-size: 12px; color: var(--muted); }
+  .bar {
+    height: 22px; border: 2px solid var(--ink); border-radius: 4px;
+    background: #fff; overflow: hidden; position: relative;
+  }
+  .bar i {
+    display: block; height: 100%;
+    background: repeating-linear-gradient(45deg, var(--red), var(--red) 8px, #a81d16 8px, #a81d16 16px);
+    transition: width 1.2s ease;
+  }
+  .bar em {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    font-style: normal; font-weight: 700; font-size: 13px; mix-blend-mode: difference; color: #fff;
+  }
+  .xbtn {
+    margin-top: 16px; padding: 12px 20px;
+    font-family: "Black Han Sans", sans-serif; font-size: 20px;
+    background: var(--red); color: #fff; border: 0; border-radius: 4px; cursor: pointer;
+    box-shadow: 0 4px 0 #7d140f;
+  }
+  .xbtn:active { transform: translateY(3px); box-shadow: 0 1px 0 #7d140f; }
+  .xbtn[disabled] { background: var(--muted); box-shadow: none; cursor: default; }
+
+  .months {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px; margin-top: 24px;
+  }
+  .month {
+    background: var(--paper);
+    border-radius: 4px;
+    padding: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.3);
+  }
+  .month.done { opacity: .8; }
+  .month h3 {
+    margin: 0 0 8px; font-family: "Black Han Sans", sans-serif; font-weight: 400; font-size: 18px;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .month h3 small { font-family: "Noto Sans KR"; font-size: 11px; color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+  .dow { font-size: 10px; text-align: center; color: var(--muted); padding-bottom: 2px; }
+  .dow.sun { color: var(--red); }
+  .day {
+    aspect-ratio: 1;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+    border: 1px solid var(--line);
+    background: #fffdf6;
+  }
+  .day.out { border-color: transparent; background: transparent; color: transparent; }
+  .day.pre { color: #c5bda8; background: transparent; }
+  .day.sun { color: var(--red); }
+  .day.today { background: var(--today); outline: 2px solid var(--ink); z-index: 1; font-weight: 700; }
+  .day.goal {
+    background: var(--red); color: #fff; font-weight: 700;
+  }
+  .day.goal::after {
+    content: "졸업"; position: absolute; bottom: -1px; font-size: 7px; letter-spacing: -.5px;
+  }
+  .day svg {
+    position: absolute; inset: 8%; width: 84%; height: 84%;
+    pointer-events: none; overflow: visible;
+  }
+  .day svg path {
+    stroke: var(--red); stroke-width: 11; stroke-linecap: round; fill: none;
+  }
+  .day.anim svg path { stroke-dasharray: 140; stroke-dashoffset: 140; animation: draw .25s ease-out forwards; }
+  .day.anim svg path:nth-child(2) { animation-delay: .22s; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+
+  .foot { text-align: center; color: #cfd6c4; font-size: 12px; margin-top: 28px; }
+  .foot a { color: #cfd6c4; }
+
+  .stamp {
+    position: absolute; top: 14px; right: 14px;
+    border: 3px solid var(--red); color: var(--red);
+    font-family: "Black Han Sans", sans-serif; font-size: 14px;
+    padding: 2px 8px; transform: rotate(8deg); opacity: .85;
+  }
+  @media (max-width: 480px) {
+    .stamp { display: none; }
+    .stat b { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <form class="gate-card" id="gateForm" autocomplete="off">
+    <h1>출입 통제</h1>
+    <p>암구호를 입력하십시오.</p>
+    <input type="password" id="pw" placeholder="••••••••" autofocus>
+    <button type="submit">확인</button>
+    <div class="gate-err" id="err"></div>
+  </form>
+</div>
+
+<div id="app">
+  <section class="hero">
+    <div class="stamp">졸업 대기</div>
+    <div class="label">졸업까지</div>
+    <div class="dday" id="dday">D-?</div>
+    <div class="sub" id="sub"></div>
+    <div class="stats">
+      <div class="stat"><b id="sDone">0</b><span>지난 날</span></div>
+      <div class="stat"><b id="sLeft">0</b><span>남은 날</span></div>
+      <div class="stat"><b id="sTotal">0</b><span>전체</span></div>
+    </div>
+    <div class="bar"><i id="barFill" style="width:0"></i><em id="barText">0%</em></div>
+    <button class="xbtn" id="xbtn">오늘 X 치기</button>
+  </section>
+
+  <div class="months" id="months"></div>
+
+  <div class="foot">
+    <a href="#" id="lock">잠그기</a>
+  </div>
+</div>
+
+<script>
+(function () {
+  // ===== 설정 =====
+  // 비밀번호의 SHA-256 해시 (기본값: "20280825")
+  // 바꾸려면: echo -n '새비번' | sha256sum  → 결과를 여기에 붙여넣기
+  var PW_HASH = "1d4564533ca86389bd491d00a35ff5a2c1eadd4026f2645a74c918cea2a4333b";
+  var START = new Date(2026, 8, 1);    // 시작일: 2026-09-01 (월은 0부터)
+  var END   = new Date(2028, 7, 25);   // 졸업일: 2028-08-25
+  // =================
+
+  var KEY_AUTH = "grad.auth";
+  var KEY_X = "grad.xd";               // 오늘 직접 X 친 날짜(YYYY-MM-DD)
+  var DAY = 86400000;
+
+  function store(k, v) {
+    try { if (v === undefined) return localStorage.getItem(k);
+          if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); }
+    catch (e) { return null; }
+  }
+  function ymd(d) {
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
+  function daysBetween(a, b) { return Math.round((b - a) / DAY); }
+  function midnight(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
+
+  async function sha256(s) {
+    var buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
+    return Array.from(new Uint8Array(buf)).map(function (b) { return b.toString(16).padStart(2, "0"); }).join("");
+  }
+
+  // ---------- gate ----------
+  var gate = document.getElementById("gate");
+  var app = document.getElementById("app");
+  var form = document.getElementById("gateForm");
+
+  function unlock() {
+    gate.style.display = "none";
+    app.style.display = "block";
+    render(true);
+  }
+  if (store(KEY_AUTH) === PW_HASH) unlock();
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    var v = document.getElementById("pw").value;
+    var h = await sha256(v);
+    if (h === PW_HASH) {
+      store(KEY_AUTH, PW_HASH);
+      unlock();
+    } else {
+      document.getElementById("err").textContent = "암구호가 틀렸습니다.";
+      form.classList.remove("shake"); void form.offsetWidth; form.classList.add("shake");
+      document.getElementById("pw").value = "";
+    }
+  });
+  document.getElementById("lock").addEventListener("click", function (e) {
+    e.preventDefault();
+    store(KEY_AUTH, null);
+    location.reload();
+  });
+
+  // ---------- calendar ----------
+  var X_SVG = '<svg viewBox="0 0 100 100"><path d="M12 14 L88 86"/><path d="M88 12 L14 88"/></svg>';
+
+  function render(animate) {
+    var today = midnight(new Date());
+    var todayKey = ymd(today);
+    var xdToday = store(KEY_X) === todayKey;
+
+    var total = daysBetween(START, END);
+    // 지난 날 = 시작일부터 어제까지 (+ 오늘 X 쳤으면 오늘까지)
+    var done = Math.min(total, Math.max(0, daysBetween(START, today) + (xdToday ? 1 : 0)));
+    var left = Math.max(0, daysBetween(today, END));
+    var pct = total ? (done / total * 100) : 100;
+
+    document.getElementById("dday").textContent = left === 0 ? "D-DAY" : "D-" + left;
+    document.getElementById("sub").textContent = ymd(END).replace(/-/g, ". ") + " 졸업";
+    document.getElementById("sDone").textContent = done;
+    document.getElementById("sLeft").textContent = total - done;
+    document.getElementById("sTotal").textContent = total;
+    document.getElementById("barText").textContent = pct.toFixed(2) + "%";
+    setTimeout(function () { document.getElementById("barFill").style.width = pct + "%"; }, 50);
+
+    var btn = document.getElementById("xbtn");
+    var inRange = today >= START && today < END;
+    btn.disabled = !inRange || xdToday;
+    btn.textContent = !inRange ? (today >= END ? "졸업 축하합니다!" : "아직 시작 전") : (xdToday ? "오늘 X 완료 ✓" : "오늘 X 치기");
+
+    var wrap = document.getElementById("months");
+    wrap.innerHTML = "";
+    var m = new Date(START.getFullYear(), START.getMonth(), 1);
+    var last = new Date(END.getFullYear(), END.getMonth(), 1);
+    var dows = ["일", "월", "화", "수", "목", "금", "토"];
+
+    while (m <= last) {
+      var box = document.createElement("div");
+      box.className = "month";
+      var y = m.getFullYear(), mo = m.getMonth();
+      var dim = new Date(y, mo + 1, 0).getDate();
+      var xCount = 0, inCount = 0;
+
+      var html = "";
+      dows.forEach(function (d, i) { html += '<div class="dow' + (i === 0 ? " sun" : "") + '">' + d + "</div>"; });
+      for (var i = 0; i < m.getDay(); i++) html += '<div class="day out"></div>';
+
+      for (var d = 1; d <= dim; d++) {
+        var cur = new Date(y, mo, d);
+        var cls = ["day"];
+        var mark = "";
+        if (cur.getDay() === 0) cls.push("sun");
+        if (cur < START || cur > END) cls.push("pre");
+        else if (+cur === +END) { cls.push("goal"); inCount++; }
+        else {
+          inCount++;
+          var crossed = cur < today || (+cur === +today && xdToday);
+          if (+cur === +today) cls.push("today");
+          if (crossed) {
+            xCount++;
+            mark = X_SVG;
+            if (animate && daysBetween(cur, today) <= 0) cls.push("anim");
+          }
+        }
+        html += '<div class="' + cls.join(" ") + '">' + d + mark + "</div>";
+      }
+      if (inCount && xCount >= inCount - (y === END.getFullYear() && mo === END.getMonth() ? 1 : 0)) box.classList.add("done");
+      box.innerHTML = '<h3>' + y + ". " + (mo + 1) + "월<small>" + xCount + " / " + inCount + "</small></h3>" +
+                      '<div class="grid">' + html + "</div>";
+      wrap.appendChild(box);
+      m = new Date(y, mo + 1, 1);
+    }
+  }
+
+  document.getElementById("xbtn").addEventListener("click", function () {
+    store(KEY_X, ymd(midnight(new Date())));
+    render(true);
+  });
+})();
+</script>
+</body>
+</html>
